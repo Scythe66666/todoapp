@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .todo-item {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .add-task input[type="text"] {
+            width: calc(100% - 80px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tasks-pending {
+            color: #666;
+            font-style: italic;
+        }
+
+        .cross {
+            text-decoration: line-through;
+            /* Applies strike-through effect */
+            color: #999;
+            /* Optional: Change color to gray */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To Do List App</h1>
+        <div class="add-task">
+            <input type="text" placeholder="Add a task">
+            <button>Add</button>
+        </div>
+        <!-- <div>
+            <input type="checkbox">
+            <span>Task 1</span>
+        </div> -->
+        <div id="toDoList">
+            //here the tasks will be added
+        </div>
+        <div class="tasks-pending">Tasks pending: <span>3</span></div>
+        <button id="end_task"> end tasks</button>
+        <div style="margin-top: 5%;">
+            Tasks completed:
+            <div id="completed-tasks">
+            </div>
+        </div>
+    </div>
+    <script src="./index.js">
+    </script>
+</body>
+</html>
