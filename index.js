@@ -85,10 +85,12 @@ function handleEndTask() {
         if (Element.checked) {
             var string = todo_list[count];
             completed_list.push(todo_list[count]);
-            todo_list.splice(count++, 1);
+            todo_list.splice(count, 1);
             var element = createCompletedTaskElement(todo_list.length, string);
             toDoDiv.appendChild(element);
+            count --;
         }
+        count++;
     })
     displayCompletedTasks(completed_list);
     displayTask(todo_list);
